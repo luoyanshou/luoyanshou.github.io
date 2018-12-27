@@ -1,37 +1,26 @@
-## Welcome to GitHub Pages
+## ThinkPHP 3.X 实现多字段 OR 查询
 
-You can use the [editor on GitHub](https://github.com/luoyanshou/luoyanshou.github.io/edit/master/README.md) to maintain and preview the content for your website in Markdown files.
+### user 数据表结构
 
-Whenever you commit to this repository, GitHub Pages will run [Jekyll](https://jekyllrb.com/) to rebuild the pages in your site, from the content in your Markdown files.
+| 字段名 | 类型 | 说明                 |
+| ------ | ---- | -------------------- |
+| id     | Int  | 表主键               |
+| sex    | Int  | 性别: 1=> 男 , 2=>女 |
+| age    | Int  | 年龄                 |
 
-### Markdown
+### 查询年龄大于20，或者性别为女的数据
 
-Markdown is a lightweight and easy-to-use syntax for styling your writing. It includes conventions for
+```php
+$cond = [
+	'age' => array('gt', 20),
+	'sex' => 2,
+	'_logic' => 'OR'
+];
 
-```markdown
-Syntax highlighted code block
+$where = [
+	'_complex' => $cond
+];
 
-# Header 1
-## Header 2
-### Header 3
-
-- Bulleted
-- List
-
-1. Numbered
-2. List
-
-**Bold** and _Italic_ and `Code` text
-
-[Link](url) and ![Image](src)
+$data = M('user')->where($where)->select();
 ```
 
-For more details see [GitHub Flavored Markdown](https://guides.github.com/features/mastering-markdown/).
-
-### Jekyll Themes
-
-Your Pages site will use the layout and styles from the Jekyll theme you have selected in your [repository settings](https://github.com/luoyanshou/luoyanshou.github.io/settings). The name of this theme is saved in the Jekyll `_config.yml` configuration file.
-
-### Support or Contact
-
-Having trouble with Pages? Check out our [documentation](https://help.github.com/categories/github-pages-basics/) or [contact support](https://github.com/contact) and we’ll help you sort it out.
