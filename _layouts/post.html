@@ -1,22 +1,26 @@
 ---
-layout: default
+layout: page
 ---
 
-    <article id="main">
-  <header class="special container">
-    <h2 class="post-title">{{ page.title }}</h2>
-    <p class="post-meta">{{ page.date | date: "%b %-d, %Y" }}{% if page.author %} • {{ page.author }}{% endif %}{% if page.meta %} • {{ page.meta }}{% endif %}</p>
-  </header>
-
-  <section class="style4 wrapper container">
-    {{ content }}
+<div class="post">
+  <!-- Wrapper Start -->
+  <section id="intro" style="border: 1px dotted #ddd;">
+    <div class="container">
+      <div class="row">
+        <div>
+          <div class="block">
+            <h1>{{ page.title }}</h1>
+            <div class="post-info-wrapper">
+              <p class="italic">By <span class="bold">{{ page.author }}</span> on <span class="bold">{{ page.date | date: "%B %-d, %Y" }}</span></p>
+            </div>
+            <hr />
+            <p>{{ content }}</p>
+          </div>
+        </div><!-- .col-md-7 close -->
+      </div>
+    </div>
   </section>
-    
-    <footer>
-        {% if page.previous %}
-        <a href="{{ page.previous.url }}" class="post-prev">&larr; Previous post</a> {% endif %}
-        {% if page.next %}
-        <a href="{{ page.next.url }}" class="post-next">Next post &rarr;</a> {% endif %}
-    </footer>
-</article>
-
+</div>
+<p class="center-text" style="padding: 30px;">
+  <a href="{{ site.baseurl }}/blog">Back to blog</a>
+</p>

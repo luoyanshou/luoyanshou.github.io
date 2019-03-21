@@ -1,31 +1,40 @@
+<meta charset="utf-8">
+<meta http-equiv="X-UA-Compatible" content="IE=edge">
+<title>{% if page.title %}{{ page.title }}{% else %}{{ site.title }}{% endif %}</title>
+<meta name="description" content="">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<!-- Place favicon.ico and apple-touch-icon.png in the root directory -->
+
+<!-- CSS -->
+<link rel="stylesheet" href="{{ site.baseurl }}/css/owl.carousel.css" />
+<link rel="stylesheet" href="{{ site.baseurl }}/css/bootstrap.min.css" />
+<link rel="stylesheet" href="{{ site.baseurl }}/css/font-awesome.min.css" />
+<link rel="stylesheet" href="{{ site.baseurl }}/css/airspace.css" />
+<link rel="stylesheet" href="{{ site.baseurl }}/css/style.css" />
+<link rel="stylesheet" href="{{ site.baseurl }}/css/ionicons.min.css" />
+<link rel="stylesheet" href="{{ site.baseurl }}/css/animate.css" />
+<link rel="stylesheet" href="{{ site.baseurl }}/css/responsive.css" />
+<link rel="stylesheet" href="{{ site.baseurl }}/css/syntax.css" />
+
+<!-- Js -->
+<script src="//ajax.googleapis.com/ajax/libs/jquery/1.10.2/jquery.min.js"></script>
+<script>window.jQuery || document.write('<script src="js/vendor/jquery-1.10.2.min.js"><\/script>')</script>
+<script src="{{ site.baseurl }}/js/bootstrap.min.js"></script>
+<script src="{{ site.baseurl }}/js/owl.carousel.min.js"></script>
+<script src="{{ site.baseurl }}/js/plugins.js"></script>
+<script src="{{ site.baseurl }}/js/min/waypoints.min.js"></script>
+<script src="{{ site.baseurl }}/js/jquery.counterup.js"></script>
+
+
+<script src="{{ site.baseurl }}/js/main.js"></script>
+
 <!--
-	Twenty by HTML5 UP
-	html5up.net | @n33co
-	Free for personal and commercial use under the CCA 3.0 license (html5up.net/license)
+/*
+ * Airspace
+ * Ported to Jekyll by Andrew Lee
+ * https://github.com/luminousrubyist/airspace-jekyll
+ * Designed and Developed by ThemeFisher
+ * https://themefisher.com/
+ *
+ */
 -->
-
-<head>
-    <title>{% if page.title %}{{ page.title }}{% else %}{{ site.title }}{% endif %}</title>
-    <meta http-equiv="content-type" content="text/html; charset=utf-8" />
-    <meta name="description" content="{{ site.description }}">
-    <meta name="keywords" content="" />
-    <!--[if lte IE 8]><script src="css/ie/html5shiv.js"></script><![endif]-->
-    <script src="/js/jquery.min.js"></script>
-    <script src="/js/jquery.dropotron.min.js"></script>
-    <script src="/js/jquery.scrolly.min.js"></script>
-    <script src="/js/jquery.scrollgress.min.js"></script>
-    <script src="/js/skel.min.js"></script>
-    <script src="/js/skel-layers.min.js"></script>
-    <script src="/js/init.js"></script>
-    <noscript>
-        <link rel="stylesheet" href="/css/skel.css" />
-        <link rel="stylesheet" href="/css/style.css" />
-        <link rel="stylesheet" href="/css/style-wide.css" />
-        <link rel="stylesheet" href="/css/style-noscript.css" />
-    </noscript>
-    <!--[if lte IE 8]><link rel="stylesheet" href="/css/ie/v8.css" /><![endif]-->
-    <!--[if lte IE 9]><link rel="stylesheet" href="/css/ie/v9.css" /><![endif]-->
-    <meta name="viewport" content="width=device-width">
-
-    <link rel="canonical" href="{{ page.url | replace:'index.html','' | prepend: site.baseurl | prepend: site.url }}">
-</head>
